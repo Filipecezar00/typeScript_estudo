@@ -1,8 +1,9 @@
-function imprimirNome(individuo: {
+interface Individuo {
   prenome: string;
   sobrenome: string;
   idade: number;
-}) {
+}
+function imprimirNome(individuo: Individuo) {
   const nome = individuo.prenome + " " + individuo.sobrenome;
   console.log(`Meu nome é ${nome}`);
 }
