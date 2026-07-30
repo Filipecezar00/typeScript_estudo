@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex6</title>
+  </head>
+  <body>
+    <h1>Módulo financeiro E-commerce</h1>
+    <form id="form_cadastro">
+      <input
+        type="number"
+        id="id_pedido"
+        placeholder="Cadastre o Id"
+        required
+      />
+      <input
+        type="text"
+        id="nome_cliente"
+        placeholder="Nome do cliente"
+        required
+      />
+      <input
+        type="number"
+        id="valor_total"
+        placeholder="Valor total"
+        step="0.01"
+        required
+      />
+      <input
+        type="text"
+        id="cupom_de_desconto"
+        placeholder="Cupom de desconto"
+      />
+
+      <button id="btn_processar">Processar Pedido</button>
+    </form>
+
+    <span id="container_valor_total">Valor total:</span>
+    <div id="historico_pedidos">Historico de Pedidos:</div>
+  </body>
+  <script src="dist/index.js" defer></script>
+</html>
