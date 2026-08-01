@@ -1,20 +1,17 @@
 namespace SobreClasses {
   class Individuo {
-    private nome: string;
-    constructor(oNome: string) {
-      this.nome = oNome;
-    }
+    constructor(private _nome: string) {}
 
     public cumprimentar(): void {
-      console.log(`Oi, meu nome é ${this.nome}`);
+      console.log(`Oi, meu nome é ${this._nome}`);
     }
 
     public setNome(novoNome: string): void {
-      this.nome = novoNome;
+      this._nome = novoNome;
     }
 
     public getNome(): string {
-      return this.nome;
+      return this._nome;
     }
   }
 
