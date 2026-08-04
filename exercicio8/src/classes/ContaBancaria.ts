@@ -59,4 +59,24 @@ export class ContaBancaria {
     let historico = [...this._historico];
     return historico;
   }
+  public transferir(
+    valor: number,
+    contaDestino: ContaBancaria,
+    descricao: string,
+  ): boolean {
+    const saqueRealizado = this.sacar(
+      valor,
+      `PIX Enviado para ${contaDestino.titular}: ${descricao}`,
+    );
+
+    if (!saqueRealizado) {
+      return false;
+    }
+
+    contaDestino.depositar(
+      valor,
+      `PIX recebido de ${this.titular}: ${descricao}`,
+    );
+    return true;
+  }
 }
