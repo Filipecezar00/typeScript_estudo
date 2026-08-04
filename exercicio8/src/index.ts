@@ -1,8 +1,16 @@
 import { ContaBancaria } from "./classes/ContaBancaria";
 
 const minhaConta = new ContaBancaria("Dev Junior", 500);
+const contaMaria = new ContaBancaria("Maria Silva", 1000);
+const contaJoao = new ContaBancaria("João Pedro", 200);
 
 console.log(`CONTA CRIADA`);
+
+console.log(`${contaMaria.titular}:R$ ${contaMaria.saldo.toFixed(2)}`);
+console.log(`${contaJoao.titular}: R$ ${contaJoao.saldo.toFixed(2)}\n`);
+
+console.log("transferência Válida (Maria > joão: R$ 300)");
+const sucesso1 = contaMaria.transferir(300, contaJoao, "Pagamento do Aluguel");
 
 console.log(`Titular: ${minhaConta.titular}`);
 
