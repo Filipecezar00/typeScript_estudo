@@ -13,10 +13,13 @@ namespace SobreClasses {
     }
   }
 
-  let maria = new Individuo("Maria");
-  maria.cumprimentar();
+  class Estudante extends Individuo {}
 
-  maria.setNome("Joao");
+  class Funcionario extends Individuo {}
 
-  console.log("O nome do individuo é " + maria.getNome());
+  let estudante1 = new Estudante("Pedro");
+  estudante1.cumprimentar();
+
+  let funcionario1 = new Funcionario("Marta");
+  funcionario1.cumprimentar();
 }
