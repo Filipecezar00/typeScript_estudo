@@ -1,6 +1,6 @@
 namespace SobreClasses {
   class Individuo {
-    constructor(private readonly _nome: string) {}
+    constructor(protected readonly _nome: string) {}
 
     public cumprimentar(): void {
       console.log(`Oi, meu nome é ${this._nome}`);
@@ -13,12 +13,13 @@ namespace SobreClasses {
     }
   }
 
-  class Estudante extends Individuo {}
+  class Estudante extends Individuo {
+    public cumprimentar(): void {
+      console.log(`Oi, eu sou um estudante. Meu nome é ${this._nome}`);
+    }
+  }
 
   class Funcionario extends Individuo {}
-
-  let estudante1 = new Estudante("Pedro");
-  estudante1.cumprimentar();
 
   let funcionario1 = new Funcionario("Marta");
   funcionario1.cumprimentar();
