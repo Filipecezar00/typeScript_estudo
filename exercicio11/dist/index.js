@@ -23,7 +23,16 @@ class PagamentoCartao {
         return true;
     }
 }
+class CaixaEletronico {
+    fecharVenda(formaDePagamento, valor) {
+        let retorno = formaDePagamento.processar(valor);
+        if (retorno === true) {
+            console.log("Venda finalizada com sucesso!");
+        }
+    }
+}
+const caixa = new CaixaEletronico();
 const pagamento_pix = new PagamentoPix("seu-email@dominio.com");
 const pagamento_cartao = new PagamentoCartao("001108009000789");
-pagamento_pix.processar(150.0);
-pagamento_cartao.processar(89.9);
+caixa.fecharVenda(pagamento_pix, 150.0);
+caixa.fecharVenda(pagamento_cartao, 89.9);
