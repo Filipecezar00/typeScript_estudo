@@ -1,8 +1,7 @@
 import { Estudante } from "./estudante";
 import { Funcionario } from "./funcionario";
 
-let estudante1 = new Estudante("Pedro");
-estudante1.cumprimentar();
+console.log(`A contribuição de cada funcionario é ${Funcionario.contribuicao}`);
 
-let funcionario1 = new Funcionario("Maria");
+let funcionario1 = new Funcionario("Maria", 1234);
 funcionario1.cumprimentar();
