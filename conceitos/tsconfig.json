@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "strictNullChecks": true
-  }
+    "strictNullChecks": false,
+    "target": "es2025"
+  },
+  "include": ["src/Geometria/*.ts"]
 }
