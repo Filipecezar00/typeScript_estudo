@@ -1,6 +1,6 @@
 import React from "react";
 import { Item } from "./item";
-import { Lista } from "./Lista";
+import { Lista } from "./Lista.tsx";
 
 const listaDeItens: Item[] = [
   {
@@ -17,7 +17,7 @@ const listaDeItens: Item[] = [
   },
 ];
 
-export default function App() {
+export function App() {
   return (
     <div className="App">
       <header className="App-header">
