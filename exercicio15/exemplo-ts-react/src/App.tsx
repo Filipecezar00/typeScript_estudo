@@ -21,7 +21,7 @@ export function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Lista itens={listaDeItens} />
+        <Lista itens={listaDeItens}>"Aqui estão os itens:"</Lista>
       </header>
     </div>
   );
