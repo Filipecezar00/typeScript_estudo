@@ -2,8 +2,10 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
+    "jsx": "preserve",
     "strictNullChecks": false,
     "target": "es2025"
   },
-  "include": ["src/Geometria/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
