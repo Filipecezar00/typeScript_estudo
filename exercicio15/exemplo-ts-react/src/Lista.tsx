@@ -1,5 +1,6 @@
 import React from "react";
 import { Item } from "./item";
+import { Contador } from "./Contador.tsx";
 
 interface ListaProps {
   children: string;
@@ -14,6 +15,7 @@ export function Lista(props: ListaProps) {
     <div>
       <h1>{props.children}</h1>
       <ul>{lis}</ul>
+      <Contador />
     </div>
   );
 }

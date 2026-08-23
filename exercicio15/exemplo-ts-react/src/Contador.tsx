@@ -12,10 +12,19 @@ export class Contador extends React.Component<Props, State> {
       contagem: 0,
     };
   }
-  public onClick(): void {
-    this.setState({ contagem: this.state.contagem + 1 });
-  }
+  public onClick = (): void => {
+    this.setState({
+      contagem: this.state.contagem + 1,
+    });
+  };
   public render() {
-    return <div>Contador:{this.state.contagem}</div>;
+    return (
+      <div>
+        Contador:{this.state.contagem}
+        <button type="button" onClick={this.onClick}>
+          Adicionar
+        </button>
+      </div>
+    );
   }
 }
